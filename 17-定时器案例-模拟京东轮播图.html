@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        .box {
+            width: 600px;
+            height: 400px;
+            position: relative;
+            border: 1px solid #ccc;
+            margin: 100px auto;
+        }
+        a {
+            display: none;
+            width: 600px;
+            height: 400px;
+            text-align: center;
+            cursor: move;
+            font: 700 100px/400px "simsun";
+        }
+        ul {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            margin-left: -66px;
+        }
+        li {
+            width: 18px;
+            height: 18px;
+            margin: 2px;
+            background-color: #000;
+            text-align: center;
+            line-height: 18px;
+            color: #fff;
+            border-radius: 50%;
+            float: left;
+            cursor: pointer;
+        }
+        span {
+            position: absolute;
+            top: 50%;
+            width: 40px;
+            height: 80px;
+            cursor: pointer;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.3);
+            margin-top: -40px;
+            font: 700 40px/80px "simsun";
+            color: #fff;
+        }
+        span:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+        #span2 {
+            right: 0;
+        }
+        .current {
+            background-color: red;
+        }
+        .show {
+            display: block;
+        }
+    </style>
+
+    <script>
+        window.onload = function () {
+            //需求1：右侧span点击之后，图片显示下一张
+            //需求2：左侧span点击之后，图片显示上一张
+            //需求3：下面的li标签被点击，上面对应索引值的a显示出来。
+            //需求4：定时轮播(逻辑和右侧span一样)
+
+            var div =document.getElementsByClassName("box")[0];
+            var aArr= document.getElementsByTagName("a");
+            var span1=document.getElementById("span1");
+            var span2=document.getElementById("span2");
+            var ul=div.children[6];
+            var liArr= ul.children;
+
+
+
+
+
+        }
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+
+<div class="box">
+    <a class="show" href="#">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <a href="#">5</a>
+    <a href="#">6</a>
+
+    <ul>
+        <li class="current">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul>
+
+    <span id="span1">&lt;</span>
+    <span id="span2">&gt;</span>
+</div>
+
+
+</body>
+</html>
